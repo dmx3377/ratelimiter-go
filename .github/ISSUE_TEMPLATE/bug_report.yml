@@ -4,7 +4,6 @@ description: Report a bug or unexpected behaviour in ratelimiter-go
 title: "[BUG] "
 labels:
   - bug
-type: bug
 body:
   - type: markdown
     attributes:
