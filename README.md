@@ -1,8 +1,8 @@
-# ratelimit-go
+# ratelimiter-go
 
 [![Go Reference](https://pkg.go.dev/badge/dmx3377/ratelimiter-go.svg)](https://pkg.go.dev/dmx3377/ratelimiter-go)
 
-**ratelimit-go** is a high-performance, thread-safe rate-limiting middleware for [Go](https://go.dev) applications. 
+**ratelimiter-go** is a high-performance, thread-safe rate-limiting middleware for [Go](https://go.dev) applications. 
 
 It utilises the [Token Bucket algorithm](https://grokipedia.com/page/Token_bucket) to provide a *"leaky bucket"* style of traffic shaping, ensuring your services remain resilient against bursts and brute-force attempts.
 
@@ -18,7 +18,7 @@ Unlike traditional limiters that require background goroutines to refill tokens,
 
 ## Installation
 
-`go get github.com/dmx3377/ratelimit-go`
+`go get github.com/dmx3377/ratelimiter-go`
 
 ## Architecture & How it Works
 
@@ -39,7 +39,7 @@ package main
 import (
 	"fmt"
 	"net/http"
-	"github.com/dmx3377/ratelimit-go"
+	"github.com/dmx3377/ratelimiter-go"
 )
 
 func main() {
