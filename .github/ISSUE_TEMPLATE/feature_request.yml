@@ -4,7 +4,6 @@ description: Suggest a new feature or improvement for ratelimiter-go
 title: "[FEATURE] "
 labels:
   - enhancement
-type: feature
 body:
   - type: markdown
     attributes:
@@ -57,9 +56,9 @@ body:
       label: Would this be a breaking change?
       multiple: false
       options:
-        - No
-        - Possibly
-        - Yes
+        - 'No'
+        - 'Possibly'
+        - 'Yes'
     validations:
       required: true
   - type: textarea
