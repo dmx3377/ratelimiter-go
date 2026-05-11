@@ -1,0 +1,97 @@
+---
+name: Bug Report
+description: Report a bug or unexpected behaviour in ratelimiter-go
+title: "[BUG] "
+labels:
+  - bug
+type: bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug in ratelimiter-go.
+
+        Please fill out the information below as accurately as possible.
+  - type: checkboxes
+    id: existing
+    attributes:
+      label: Existing Issues
+      description: Before submitting, please check for duplicates.
+      options:
+        - label: I have searched the existing issues
+          required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: Describe the issue and what you expected to happen instead.
+      placeholder: >
+        Example:
+
+        Running the code causes it to crash with an error.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to Reproduce
+      description: Provide steps or a minimal reproducible example.
+      placeholder: |
+        1. Create limiter with X requests
+        2. Call repeatedly
+        3. Reset limiter
+        4. Observe unexpected behaviour
+      render: markdown
+    validations:
+      required: true
+  - type: textarea
+    id: code
+    attributes:
+      label: Example Code
+      description: Paste relevant code snippets if applicable.
+      render: go
+    validations:
+      required: false
+  - type: input
+    id: version
+    attributes:
+      label: ratelimiter-go Version
+      description: Which version are you using?
+      placeholder: v1.0.0
+    validations:
+      required: true
+  - type: input
+    id: go-version
+    attributes:
+      label: Go Version
+      description: Output of `go version`
+      placeholder: go1.24.0
+    validations:
+      required: true
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating System
+      multiple: false
+      options:
+        - Linux
+        - Windows
+        - OS X
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs / Panic Output
+      description: Paste any logs, errors, or panic traces here.
+      render: shell
+    validations:
+      required: false
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Context
+      description: Add any extra information, benchmarks, screenshots, or related issues.
+    validations:
+      required: false

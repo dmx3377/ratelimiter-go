@@ -1,0 +1,78 @@
+---
+name: Feature Request
+description: Suggest a new feature or improvement for ratelimiter-go
+title: "[FEATURE] "
+labels:
+  - enhancement
+type: feature
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting an improvement to ratelimiter-go.
+
+        Please explain the feature as clearly as possible.
+  - type: checkboxes
+    id: existing
+    attributes:
+      label: Existing Requests
+      description: Please check if this feature has already been suggested.
+      options:
+        - label: I have searched the existing issues
+          required: true
+  - type: textarea
+    id: feature
+    attributes:
+      label: Feature Description
+      description: What feature would you like to see added?
+      placeholder: |
+        Example:
+        Add support for distributed rate limiting using Redis.
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem / Use Case
+      description: What problem does this solve?
+      placeholder: >
+        Example:
+
+        I need multiple instances of my API server to share the same rate limit state.
+    validations:
+      required: true
+  - type: textarea
+    id: proposed
+    attributes:
+      label: Proposed Solution
+      description: Describe how you think this could work.
+      placeholder: |
+        Example:
+        Add a Redis-backed storage interface for counters and expiry tracking.
+    validations:
+      required: false
+  - type: dropdown
+    id: breaking
+    attributes:
+      label: Would this be a breaking change?
+      multiple: false
+      options:
+        - No
+        - Possibly
+        - Yes
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives Considered
+      description: Describe any alternative solutions or workarounds you've considered.
+    validations:
+      required: false
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Context
+      description: Add benchmarks, references, examples, or anything else relevant.
+    validations:
+      required: false
