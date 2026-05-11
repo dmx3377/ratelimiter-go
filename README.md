@@ -1,5 +1,7 @@
 # ratelimit-go
 
+[![Go Reference](https://pkg.go.dev/badge/dmx3377/ratelimiter-go.svg)](https://pkg.go.dev/dmx3377/ratelimiter-go)
+
 **ratelimit-go** is a high-performance, thread-safe rate-limiting middleware for [Go](https://go.dev) applications. 
 
 It utilises the [Token Bucket algorithm](https://grokipedia.com/page/Token_bucket) to provide a *"leaky bucket"* style of traffic shaping, ensuring your services remain resilient against bursts and brute-force attempts.
